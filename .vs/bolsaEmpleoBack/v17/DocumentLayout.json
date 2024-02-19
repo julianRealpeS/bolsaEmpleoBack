@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ZEFHYROS\\source\\repos\\bolsaEmpleoBack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78B4C526-718C-4332-9C64-D361F4EA5D03}|bolsaEmpleoBack\\bolsaEmpleoBack.csproj|c:\\users\\zefhyros\\source\\repos\\bolsaempleoback\\bolsaempleoback\\services\\impl\\vacanteofertadaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78B4C526-718C-4332-9C64-D361F4EA5D03}|bolsaEmpleoBack\\bolsaEmpleoBack.csproj|solutionrelative:bolsaempleoback\\services\\impl\\vacanteofertadaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78B4C526-718C-4332-9C64-D361F4EA5D03}|bolsaEmpleoBack\\bolsaEmpleoBack.csproj|c:\\users\\zefhyros\\source\\repos\\bolsaempleoback\\bolsaempleoback\\controllers\\vacanteofertadacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78B4C526-718C-4332-9C64-D361F4EA5D03}|bolsaEmpleoBack\\bolsaEmpleoBack.csproj|solutionrelative:bolsaempleoback\\controllers\\vacanteofertadacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VacanteOfertadaService.cs",
+              "DocumentMoniker": "C:\\Users\\ZEFHYROS\\source\\repos\\bolsaEmpleoBack\\bolsaEmpleoBack\\Services\\Impl\\VacanteOfertadaService.cs",
+              "RelativeDocumentMoniker": "bolsaEmpleoBack\\Services\\Impl\\VacanteOfertadaService.cs",
+              "ToolTip": "C:\\Users\\ZEFHYROS\\source\\repos\\bolsaEmpleoBack\\bolsaEmpleoBack\\Services\\Impl\\VacanteOfertadaService.cs",
+              "RelativeToolTip": "bolsaEmpleoBack\\Services\\Impl\\VacanteOfertadaService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T22:47:07.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VacanteOfertadaController.cs",
+              "DocumentMoniker": "C:\\Users\\ZEFHYROS\\source\\repos\\bolsaEmpleoBack\\bolsaEmpleoBack\\Controllers\\VacanteOfertadaController.cs",
+              "RelativeDocumentMoniker": "bolsaEmpleoBack\\Controllers\\VacanteOfertadaController.cs",
+              "ToolTip": "C:\\Users\\ZEFHYROS\\source\\repos\\bolsaEmpleoBack\\bolsaEmpleoBack\\Controllers\\VacanteOfertadaController.cs",
+              "RelativeToolTip": "bolsaEmpleoBack\\Controllers\\VacanteOfertadaController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowC8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T22:41:32.69Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
