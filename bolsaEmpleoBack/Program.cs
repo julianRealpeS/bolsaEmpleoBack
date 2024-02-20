@@ -7,6 +7,15 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "MyPolicy",
+        policy =>
+        {
+            policy.WithOrigins("*");
+        });
+});
+
 // Add repository to the container.
 builder.Services.AddScoped<ITipoDocumentoRepository, TipoDocumentoRepository>();
 builder.Services.AddScoped<ICiudadanoRepository, CiudadanoRepository>();
@@ -33,8 +42,7 @@ builder.Services.AddDbContext<BolsaEmpleoDbContext>(options =>
 var app = builder.Build();
 
 //Cors configuration
-const string cors = "CORS_MODE_UNRESTRICTED";
-app.UseCors(cors);
+app.UseCors("MyPolicy");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
