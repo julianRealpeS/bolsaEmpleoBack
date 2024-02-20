@@ -59,6 +59,7 @@ namespace bolsaEmpleoBack.Services.Impl
             return new CiudadanoGeneralDTO()
             {
                 CiudadanoId = ciudadanoBuscado.CiudadanoId,
+                TipoDocumentoId = ciudadanoBuscado.TipoDocumentoId,
                 Cedula = ciudadanoBuscado.Cedula,
                 Nombres = ciudadanoBuscado.Nombres,
                 Apellidos = ciudadanoBuscado.Apellidos,
