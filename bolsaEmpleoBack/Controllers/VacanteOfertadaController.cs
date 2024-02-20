@@ -1,4 +1,5 @@
 ﻿using bolsaEmpleoBack.DTOs;
+using bolsaEmpleoBack.Models;
 using bolsaEmpleoBack.Services;
 using bolsaEmpleoBack.Services.Impl;
 using Microsoft.AspNetCore.Http;
@@ -59,6 +60,22 @@ namespace bolsaEmpleoBack.Controllers
         [HttpPut("postular")]
         public async Task<ActionResult<VacatanteOfertadaConsultarDTO>> Update(VacanteOfertadaActualizarDTO vacanteOfertadaActualizarDTO)
         {
+            //Validation
+            var errorBody = "La vacante debe tener un";
+            var errorLog = new List<string>();
+            if (vacanteOfertadaActualizarDTO.CiudadanoId == 0)
+            {
+                errorLog.Add(errorBody+" ciudadano para asignar");
+            }
+            if (vacanteOfertadaActualizarDTO.VacanteOfertadaId == 0)
+            {
+                errorLog.Add(errorBody+" id");
+            }
+            if (errorLog.Count > 0)
+            {
+                return BadRequest(errorLog);
+            }
+            //Update code
             var vacanteActualizada = await _vacanteOfertadaService.Update(vacanteOfertadaActualizarDTO);
             if (vacanteActualizada == null)
             {

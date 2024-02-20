@@ -60,6 +60,36 @@ namespace bolsaEmpleoBack.Controllers
         [HttpPost("registrar")]
         public async Task<ActionResult<CiudadanoRegistrarDTO>> Save(CiudadanoRegistrarDTO ciudadano)
         {
+            //Validation
+            var errorBody = "EL ciudadano debe tener un";
+            var errorLog = new List<string>();
+            if (ciudadano.TipoDocumentoId == 0) {
+                errorLog.Add(errorBody + " tipo de documento");
+            }
+            if (ciudadano.Cedula == null || ciudadano.Cedula == "")
+            {
+                errorLog.Add(errorBody + "a cedula");
+            }
+            if (ciudadano.Nombres == null || ciudadano.Nombres == "")
+            {
+                errorLog.Add(errorBody + " nombre");
+            }
+            if (ciudadano.Apellidos == null || ciudadano.Apellidos == "")
+            {
+                errorLog.Add(errorBody + " apellido");
+            }
+            if (ciudadano.Profesion == null || ciudadano.Profesion == "")
+            {
+                errorLog.Add(errorBody + "a profesion");
+            }
+            if (ciudadano.CorreoElectronico == null || ciudadano.CorreoElectronico == "")
+            {
+                errorLog.Add(errorBody + " correo electronico");
+            }
+            if (errorLog.Count > 0) {
+                return BadRequest(errorLog);
+            }
+            //Save code
             var ciudadanoRegistrado = await _ciudadanoService.Save(ciudadano);
             return Ok(ciudadanoRegistrado);
         }
@@ -75,6 +105,42 @@ namespace bolsaEmpleoBack.Controllers
         [HttpPut("actualizar")]
         public async Task<ActionResult<CiudadanoRegistrarDTO>> Update(CiudadanoGeneralDTO ciudadano)
         {
+            //Validation
+            var errorBody = "EL ciudadano debe tener un";
+            var errorLog = new List<string>();
+            if (ciudadano.CiudadanoId == 0)
+            {
+                errorLog.Add(errorBody + " id");
+            }
+            if (ciudadano.TipoDocumentoId == 0)
+            {
+                errorLog.Add(errorBody + " tipo de documento");
+            }
+            if (ciudadano.Cedula == null || ciudadano.Cedula == "")
+            {
+                errorLog.Add(errorBody + "a cedula");
+            }
+            if (ciudadano.Nombres == null || ciudadano.Nombres == "")
+            {
+                errorLog.Add(errorBody + " nombre");
+            }
+            if (ciudadano.Apellidos == null || ciudadano.Apellidos == "")
+            {
+                errorLog.Add(errorBody + " apellido");
+            }
+            if (ciudadano.Profesion == null || ciudadano.Profesion == "")
+            {
+                errorLog.Add(errorBody + "a profesion");
+            }
+            if (ciudadano.CorreoElectronico == null || ciudadano.CorreoElectronico == "")
+            {
+                errorLog.Add(errorBody + " correo electronico");
+            }
+            if (errorLog.Count > 0)
+            {
+                return BadRequest(errorLog);
+            }
+            //Update code
             var ciudadanoActualizado = await _ciudadanoService.Update(ciudadano);
             return Ok(ciudadanoActualizado);
         }
